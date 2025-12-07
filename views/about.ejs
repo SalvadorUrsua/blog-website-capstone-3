@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog Website</title>
+        <link rel="stylesheet" href="styles/style.css" >
+    </head>
+
+    <body>
+        <%- include("partials/header.ejs") %>
+        <div class="about">
+            <div>
+                <h1>What is this website for?</h1>
+                <p>This is just a simple practice website implementing the knowledge learned from Section 1 - 26 of full-stack web
+                development.</p>
+                <h1>Creator:</h1>
+                <p>His this is Salvador. I created this small website utilizing HTML, CSS, Javascript, Bootstrap, and Nodejs.</p>
+                <p>The goal is to write a short blog and temporarily save the text and make it available for viewing once created.</p>
+                <p>Take note that the data is only available while the server is running on port 3000. When the server is restarted, the data is also refreshed.</p>
+            </div>
+            
+        </div>
+        <script type="module" src="/js/script.js"></script> 
+        <%- include("partials/footer.ejs") %>
+    </body>
+</html>

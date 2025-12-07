@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog Website</title>
+        <link rel="stylesheet" href="styles/style.css" >
+    </head>
+
+    <body>
+        <%- include("partials/header.ejs") %>
+        <div class="write">              
+            <% if(locals.textHere.length > 0) {%>  
+                    <h1>This will erase your existing blog, once saved. &#x1F447</h1>  
+            <% } else { %>
+                    <h1>Write your blog here. &#x1F447</h1>
+            <% } %>                    
+            <form action="/saved" method="POST">
+                <textarea name="textbox" placeholder="What's on your mind?" rows="10" cols="50"></textarea>  
+                <br />
+                <input type="submit" value="SAVE" />        
+                <br />
+            </form>            
+
+
+
+            <!-- <form action="/retrieve" method="POST">                    
+                <input type="submit" value="PLACE" />
+            </form>    
+            <br />
+            % if(locals.textHere) {%>
+                <p>%= textHere %></p>
+            % } else {%>
+                <p>Your blog here!</p>
+            % } %>     -->
+        </div>          
+        <script type="module" src="/js/script.js"></script> 
+        <%- include("partials/footer.ejs") %>
+    </body>
+</html>
